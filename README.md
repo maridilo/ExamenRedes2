@@ -120,6 +120,8 @@ Esta estrategia brinda dos beneficios a las redes actuales:
 
 ## Parte II: Práctica con Cisco Packet Tracer
 ### Ejercicio 1 – La Ruta Perdida entre Dos Reinos
+![diagramaejercicio1](./imagen_2025-04-04_165242000.png)
+![diagrama2ejercicio1](./)
 
 - Descripción
   

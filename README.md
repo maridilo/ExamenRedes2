@@ -114,7 +114,8 @@ Esta estrategia brinda dos beneficios a las redes actuales:
 -	Uso flexible de direcciones privadas: las organizaciones pueden usar rangos privados sin restricciones ni necesidad de coordinar con proveedores de IPs públicas.
 -	Conexiones simultáneas con una sola IP pública: NAT permite que múltiples dispositivos se conecten a internet al mismo tiempo usando diferentes números de puerto.
 
-![diagrama5](./
+![diagrama5](./imagen_2025-04-04_164443716.png)
+
 ---
 
 ## Parte II: Práctica con Cisco Packet Tracer

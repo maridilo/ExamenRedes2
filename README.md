@@ -161,7 +161,10 @@ ip route 192.168.10.0 255.255.255.0 192.168.30.1
 
 ### Prueba de conectividad:
 
-  
+![prueba1](./imagen_2025-04-04_170213768.png)
+![prueba2](./imagen_2025-04-04_170238170.png)
+
+La comunicación entre ambos reinos ha sido restaurada correctamente.
 
 ### Ejercicio 2 – La Ciudad de las Redes Aisladas
 - Descripción

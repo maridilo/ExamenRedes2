@@ -12,7 +12,7 @@ Pregunta: ¿Qué representa el mural de las siete capas en términos de las rede
 
 El mural de las siete capas en términos de las redes de comunicación modernas representa el modelo OSI (Open Systems Interconnection), que describe como los datos viajan desde un dispositivo emisor hasta un receptor en una red de comunicaciones. Cada capa del modelo OSI realiza funciones específicas que ayudan a encapsular, transportar, interpretar o entregar correctamente la información.
 Este modelo divide el proceso de comunicación en siete capas jerárquicas, desde el software mas cercano al usuario hasta el hardware físico de transmisión. Estas capas son:
-
+---
    
 ### 3. Los Dos Pergaminos del Mensajero
    

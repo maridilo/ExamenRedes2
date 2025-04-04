@@ -154,11 +154,13 @@ Esta estrategia brinda dos beneficios a las redes actuales:
 ### Rutas estáticas configuradas
 
 En Router A:
+```bash
 ip route 192.168.20.0 255.255.255.0 192.168.30.2
-
+```
 En Router B:
+```bash
 ip route 192.168.10.0 255.255.255.0 192.168.30.1
-
+```
 ### Prueba de conectividad:
 
 ![prueba1](./imagen_2025-04-04_170213768.png)
@@ -167,15 +169,62 @@ ip route 192.168.10.0 255.255.255.0 192.168.30.1
 La comunicación entre ambos reinos ha sido restaurada correctamente.
 
 ### Ejercicio 2 – La Ciudad de las Redes Aisladas
-- Descripción
-  
-- Topología
-  
-- VLANs y subinterfaces
-  
-- Comandos configurados
-  
-- Capturas de configuración
-  
-- Pruebas de conectividad
+
+![diagramaejercicio2](./imagen_2025-04-04_170508943.png)
+![foto](./imagen_2025-04-04_170627082.png)
+
+### Topología
+
+La red está compuesta por:
+
+- 1 router (R1), que actúa como la Gran Torre Central.  
+- 1 switch Cisco 2960, que representa la infraestructura común compartida.  
+- 4 PCs:  
+  - PC1 y PC2 forman parte del gremio de los Arquitectos (VLAN 10).  
+  - PC3 y PC4 pertenecen al gremio de los Escribas (VLAN 20).  
+- Todos los dispositivos están conectados al mismo switch.  
+- El router está conectado al switch con un único cable en el puerto Fa0/24, configurado en modo **trunk**.
+
+### Direcciones IP asignadas
+
+#### VLAN 10 – Arquitectos
+- Red: `192.168.10.0/24`
+- Gateway: `192.168.10.1` (router)
+- PC1: `192.168.10.2`
+- PC2: `192.168.10.3`
+
+#### VLAN 20 – Escribas
+- Red: `192.168.20.0/24`
+- Gateway: `192.168.20.1` (router)
+- PC3: `192.168.20.2`
+- PC4: `192.168.20.3`
+
+### Configuración en el Switch
+
+- Se crearon dos VLANs:
+  - VLAN 10 llamada `"Arquitectos"`
+  - VLAN 20 llamada `"Escribas"`
+- Se asignaron los puertos:
+  - Fa0/1 y Fa0/2 a VLAN 10 (PC1 y PC2)
+  - Fa0/3 y Fa0/4 a VLAN 20 (PC3 y PC4)
+- El puerto **Fa0/24**, que conecta al router, se configuró como **trunk** con encapsulación **dot1Q**
+![foto](./imagen_2025-04-04_170703384.png)
+
+### Configuración en el router
+
+- Se crearon dos subinterfaces sobre `GigabitEthernet0/0`:
+
+  - `GigabitEthernet0/0.10` para VLAN 10:
+    - Encapsulación `dot1Q 10`
+    - Dirección IP: `192.168.10.1`
+
+  - `GigabitEthernet0/0.20` para VLAN 20:
+    - Encapsulación `dot1Q 20`
+    - Dirección IP: `192.168.20.1`
+
+- La interfaz física `GigabitEthernet0/0` se activó con el comando `no shutdown`.
+![foto](./imagen_2025-04-04_170721717.png)
+
+### Prueba de conectividad:
+![foto](./imagen_2025-04-04_170739728.png)
   

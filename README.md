@@ -16,13 +16,20 @@ Este modelo divide el proceso de comunicación en siete capas jerárquicas, desd
 ---
    
 ### 3. Los Dos Pergaminos del Mensajero
+
+---
    
 ### 5. El Enigma de las Subredes
+
+---
    
 ### 7. La Encrucijada de las Rutas
+
+---
    
 ### 9. El Guardián de la Máscara Única
-    
+
+---
 
 ## Parte II: Práctica con Cisco Packet Tracer
 ### Ejercicio 1 – La Ruta Perdida entre Dos Reinos

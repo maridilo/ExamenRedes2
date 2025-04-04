@@ -80,15 +80,41 @@ Subredes generadas:
 3.	192.168.50.128/26 → Hosts: 192.168.50.129 a 192.168.50.190
 4.	192.168.50.192/26 → Hosts: 192.168.50.193 a 192.168.50.254
 
+![diagrama3](./imagen_2025-04-04_164123190.png)
 
 ---
    
-### 7. La Encrucijada de las Rutas
+### 4. La Encrucijada de las Rutas
+Llegas a una encrucijada dentro de las ruinas: cuatro caminos diferentes se extienden hacia distintas aldeas en los alrededores de la ciudad antigua. En el centro, un tótem tallado muestra flechas apuntando hacia cada camino, con inscripciones de destinos y distancias. Notas que algunas flechas parecen fijas e inmutables (talladas en la piedra), mientras que otras son piezas móviles que pudieron reorientarse si se abría o cerraba algún camino en el pasado. Este tótem se asemeja a un antiguo dispositivo de enrutamiento que dirigía el tráfico de datos por el camino adecuado. 
+#### Pregunta:
+¿Qué concepto moderno de redes representa el tótem con flechas de la encrucijada? Explica qué es una tabla de enrutamiento y cómo funciona en un router actual. Además, interpreta la diferencia entre las flechas talladas en piedra y las flechas móviles en términos de enrutamiento estático vs. enrutamiento dinámico en redes.
+
+#### Respuesta:
+El tótem en el centro de la encrucijada con flechas representa una tabla de enrutamiento. Es uno de los mecanismos esenciales de un router y su función es guiar a los paquetes hacia su destino, escogiendo la mejor ruta disponible.
+
+Una tabla de enrutamiento contiene las rutas conocidas por el router. Cada entrada incluye la dirección de red de destino, la interfaz de salida y, en algunos casos, la dirección IP del siguiente salto. Cuando un paquete llega al router, este examina su tabla y decide porque ruta (interfaz) enviarlo, según la coincidencia más específica con a las direcciones de destino del paquete.
+
+Las flechas talladas en piedra simbolizan el enrutamiento estático. Se tratan de rutas configuradas manualmente por un administrador de red, y no se modifican automáticamente. Son útiles en redes pequeñas, ya que ofrecen más control, pero son poco flexibles ya que no se actualizan solas si hay cambios en la red.
+
+Las flechas móviles simbolizan el enrutamiento dinámico. Los routers utilizan protocolos de enrutamiento como RIP, OSPF o EIGRP para intercambiar información entre sí y actualizar de forma automática sus tablas de enrutamiento cuando detectan cambios en la red. Esto lo hace ideal para redes más grandes o con tráfico variable ya que permite mayor flexibilidad y adaptabilidad.
 
 ---
    
-### 9. El Guardián de la Máscara Única
+### 5. El Guardián de la Máscara Única
+En la última sala del templo, frente a la salida, te encuentras con la estatua de un guardián con dos caras. Según una leyenda grabada en la base, este guardián protegía la ciudad oculta de los forasteros. Cuando un mensajero salía de la ciudad, el guardián reemplazaba su máscara por la suya propia, de modo que, para el mundo exterior, todos los mensajes parecían venir únicamente del guardián. Al regresar la respuesta, el guardián recordaba qué máscara original correspondía a cada mensaje y reenviaba la respuesta al habitante correcto dentro de la ciudad. Gracias a este ardid, la ciudad pudo ocultar la identidad de sus miembros y usar un único rostro para todas sus comunicaciones externas. 
+#### Pregunta:
+¿Qué técnica de redes moderna se refleja en la leyenda del Guardián de la Máscara? Nombra y describe brevemente este mecanismo, explicando cómo permite que múltiples dispositivos internos de una red compartan una única identidad (dirección) al comunicarse con el exterior, y menciona dos beneficios que brinda esta estrategia a las redes actuales.
 
+#### Respuesta:
+En la leyenda del Guardián de la Mascara única se refleja la técnica moderna de redes conocida como NAT (Network Address Translation). 
+
+NAT permite que varios dispositivos internos de una red local se comuniquen con el exterior utilizando una única dirección IP pública. Así, cuando un dispositivo envía datos al exterior, el router reemplaza su dirección IP privada a la IP pública, haciendo que todos los mensajes salientes parezcan venir del mismo sitio, el router. Al recibir una respuesta, el router usa una tabla de traducción que mantiene temporalmente para reenviar la respuesta al destinatario correcto dentro de la red.
+
+Esta estrategia brinda dos beneficios a las redes actuales:
+-	Uso flexible de direcciones privadas: las organizaciones pueden usar rangos privados sin restricciones ni necesidad de coordinar con proveedores de IPs públicas.
+-	Conexiones simultáneas con una sola IP pública: NAT permite que múltiples dispositivos se conecten a internet al mismo tiempo usando diferentes números de puerto.
+
+![diagrama5](./
 ---
 
 ## Parte II: Práctica con Cisco Packet Tracer

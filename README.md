@@ -121,19 +121,46 @@ Esta estrategia brinda dos beneficios a las redes actuales:
 ## Parte II: Práctica con Cisco Packet Tracer
 ### Ejercicio 1 – La Ruta Perdida entre Dos Reinos
 ![diagramaejercicio1](./imagen_2025-04-04_165242000.png)
-![diagrama2ejercicio1](./)
+![diagrama2ejercicio1](./imagen_2025-04-04_165624622.png)
 
-- Descripción
-  
-- Topología
-  
-- Direccionamiento IP
-  
-- Comandos configurados
-  
-- Capturas de configuración
-  
-- Pruebas de conectividad
+### Topología usada
+
+- 2 PCs por ciudad  
+- 1 switch Cisco 2960 por ciudad  
+- 1 router Cisco 1941 por ciudad (con módulo WIC-2T para usar interfaz Serial0/1/0)  
+- Cableado:
+  - Cables rectos: PC ↔ Switch ↔ Router  
+  - Cable serial (DCE/DTE): Router A ↔ Router B  
+
+### Direccionamiento IP
+
+#### Ciudad A – Red `192.168.10.0/24`
+- PC_A1 → `192.168.10.2` / Gateway: `192.168.10.1`
+- PC_A2 → `192.168.10.3` / Gateway: `192.168.10.1`
+- Router A:
+  - G0/0 → `192.168.10.1`
+  - S0/1/0 → `192.168.30.1` (enlace con Router B)
+
+#### Ciudad B – Red `192.168.20.0/24`
+- PC_B1 → `192.168.20.2` / Gateway: `192.168.20.1`
+- PC_B2 → `192.168.20.3` / Gateway: `192.168.20.1`
+- Router B:
+  - G0/0 → `192.168.20.1`
+  - S0/1/0 → `192.168.30.2` (enlace con Router A)
+
+#### Enlace entre routers – Red `192.168.30.0/30`
+- Solo tiene 2 IPs útiles (perfecto para el enlace punto a punto)
+
+### Rutas estáticas configuradas
+
+En Router A:
+ip route 192.168.20.0 255.255.255.0 192.168.30.2
+
+En Router B:
+ip route 192.168.10.0 255.255.255.0 192.168.30.1
+
+### Prueba de conectividad:
+
   
 
 ### Ejercicio 2 – La Ciudad de las Redes Aisladas

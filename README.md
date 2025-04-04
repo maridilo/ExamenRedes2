@@ -90,6 +90,8 @@ Las **flechas talladas en piedra** simbolizan el **enrutamiento estático**. Se 
 
 Las **flechas móviles** simbolizan el **enrutamiento dinámico**. Los routers utilizan protocolos de enrutamiento como RIP, OSPF o EIGRP para intercambiar información entre sí y actualizar de forma automática sus tablas de enrutamiento cuando detectan cambios en la red. Esto lo hace ideal para redes más grandes o con tráfico variable ya que permite mayor flexibilidad y adaptabilidad.
 
+![diagrama](./imagen_2025-04-04_172922154.png)
+
 ---
 ### 5. El Guardián de la Máscara Única
 En la última sala del templo, frente a la salida, te encuentras con la estatua de un **guardián con dos caras**. Según una leyenda grabada en la base, este guardián protegía la ciudad oculta de los forasteros. Cuando un mensajero salía de la ciudad, el guardián reemplazaba su máscara por la suya propia, de modo que, para el mundo exterior, todos los mensajes parecían venir únicamente del guardián. Al regresar la respuesta, el guardián recordaba qué máscara original correspondía a cada mensaje y reenviaba la respuesta al habitante correcto dentro de la ciudad. Gracias a este ardid, la ciudad pudo ocultar la identidad de sus miembros y usar un único rostro para todas sus comunicaciones externas. 
